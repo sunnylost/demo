@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Gradient</title>
+        <style type="text/css">
+            html {
+                height: 100%;
+            }
+
+            body {
+                height: 100%;
+                background-attachment: fixed;
+                background-color: #666;
+                background-image: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#000), to(#666));
+                background-image: -webkit-linear-gradient(top, #000, #666);
+                background-image: -moz-linear-gradient(top, #000, #666);
+                background-image: -ms-linear-gradient(top, #000, #666);
+                background-image: -o-linear-gradient(top, #000, #666);
+                background-image: linear-gradient(top, #000, #666);
+            }
+        </style>
+    </head>
+    <body>
+    </body>
+</html>
