@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>HTML template</title>
+        <style type="text/css">
+            html, body, div, span, p, ul, li {
+                padding: 0;
+                margin: 0;
+            }
+
+            a { text-decoration: none; }
+
+            ul { list-style: none; }
+
+            body {
+                background: #ededed;
+                font-size: 50px;
+            }
+
+            .wrapper {
+                width: 70%;
+                margin: 200px auto;
+            }
+
+            .menu {
+                display: inline-block;
+                background-image: -webkit-linear-gradient(top, rgb(249, 249, 249), rgb(240, 240, 240));
+                background-image: -moz-linear-gradient(top, rgb(249, 249, 249), rgb(240, 240, 240));
+                background-image: -o-linear-gradient(top, rgb(249, 249, 249), rgb(240, 240, 240));
+                background-image: -ms-linear-gradient(top, rgb(249, 249, 249), rgb(240, 240, 240));
+                background-image: linear-gradient(top, rgb(249, 249, 249), rgb(240, 240, 240));
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f9f9f9', EndColorStr='#f0f0f0');
+                border-radius: 0.2em;
+                border: 1px solid #cecece;
+                box-shadow: inset 0px 1px 0px #fff, 0px 1px 2px rgba(0, 0, 0, 0.06);
+            }
+
+            .menu li {
+                float: left;
+                position: relative;
+                border-right: 1px solid #d8d8d8;
+                border-left: 1px solid #fff;
+            }
+
+            .menu li:first-child {
+                border-left: none;
+            }
+
+            .menu li:last-child {
+                border-right: none;
+            }
+
+            .menu li a {
+                font-family: "Helvetica Neue", Helvetica, sans-serif;
+                font-size: 0.75em;
+                font-weight: bold;
+                color: #666;
+                text-shadow: 0 1px 0 #fff;
+                display: block;
+                padding: 0 1em;
+                line-height: 2.5em;
+            }
+
+            .menu span {
+                position: absolute;
+                top: -2em;
+                right: 0.5em;
+                width: 1.5em;
+                height: 1.5em;
+                line-height: 1.5em;
+                text-align: center;
+                font-family: "Helvetica Neue", Helvetica, sans-serif;
+                font-weight: bold;
+                color: #fff;
+                text-shadow: 0 1px 0 rgba(0, 0, 0, 0.15);
+                border-radius: 4em;
+                opacity: 0;
+                -webkit-transition: .3s top ease-in, .3s opacity ease-in;
+                -moz-transition: .3s top ease-in, .3s opacity ease-in;
+                -o-transition: .3s top ease-in, .3s opacity ease-in;
+                -ms-transition: .3s top ease-in, .3s opacity ease-in;
+                transition: .3s top ease-in, .3s opacity ease-in;
+            }
+
+            .pink {
+                background-image: -webkit-linear-gradient(top, rgb(247, 130, 151), rgb(244, 102, 119));
+                background-image: -moz-linear-gradient(top, rgb(247, 130, 151), rgb(244, 102, 119));
+                background-image: -o-linear-gradient(top, rgb(247, 130, 151), rgb(244, 102, 119));
+                background-image: -ms-linear-gradient(top, rgb(247, 130, 151), rgb(244, 102, 119));
+                background-image: linear-gradient(top, rgb(247, 130, 151), rgb(244, 102, 119));
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#f78297', EndColorStr='#f46677');
+                border: 1px solid #ce4f5e;
+            }
+
+            .yellow {
+                background-image: -webkit-linear-gradient(top, rgb(254, 218, 113), rgb(254, 186, 72));
+                background-image: -moz-linear-gradient(top, rgb(254, 218, 113), rgb(254, 186, 72));
+                background-image: -o-linear-gradient(top, rgb(254, 218, 113), rgb(254, 186, 72));
+                background-image: -ms-linear-gradient(top, rgb(254, 218, 113), rgb(254, 186, 72));
+                background-image: linear-gradient(top, rgb(254, 218, 113), rgb(254, 186, 72));
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#feda71', EndColorStr='#feba48');
+                border: 1px solid #dea94f;
+            }
+
+            .blue {
+                background-image: -webkit-linear-gradient(top, rgb(172, 228, 248), rgb(108, 205, 243));
+                background-image: -moz-linear-gradient(top, rgb(172, 228, 248), rgb(108, 205, 243));
+                background-image: -o-linear-gradient(top, rgb(172, 228, 248), rgb(108, 205, 243));
+                background-image: -ms-linear-gradient(top, rgb(172, 228, 248), rgb(108, 205, 243));
+                background-image: linear-gradient(top, rgb(172, 228, 248), rgb(108, 205, 243));
+                filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,StartColorStr='#ace4f8', EndColorStr='#6ccdf3');
+                border: 1px solid #79b5cb;
+            }
+
+            .menu li:hover a {
+                color: #343434;
+            }
+
+            .menu li:hover a span {
+                top: -1em;
+                opacity: 1;
+            }
+        </style>
+    </head>
+    <body>
+        <a href="http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/menu-notification-badges-using-html5-data-attributes">source</a>
+        <div class="wrapper">
+            <ul class="menu">
+                <li><a href="#">Profile<span class="pink">2</span></a></li>
+                <li><a href="#">Setting<span class="yellow">3</span></a></li>
+                <li><a href="#">Notifications<span class="blue">6</span></a></li>
+                <li><a href="#">Logout</a></li>
+            </ul>
+        </div>
+        <script>
+        </script>
+    </body>
+</html>
