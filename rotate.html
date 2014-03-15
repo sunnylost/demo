@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>box-shadow</title>
+        <style type="text/css">
+            * {
+                padding: 0;
+                margin: 0;
+            }
+
+            html {
+                height: 100%;
+            }
+
+            body {
+                height: 100%;
+                text-align: center;
+            }
+
+            #stage {
+                position: relative;
+                width: 600px;
+                height: 300px;
+                margin: auto;
+                top: 20%;
+                -webkit-backface-visibility: hidden;
+                -webkit-perspective: 600;
+                -webkit-perspective-origin: 0 -80%;
+            }
+            #stage div {
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                margin: 30px;
+                background-color: #249486;
+                text-align: center;
+                line-height: 150px;
+                font-size: 80px;
+                color: #fff;
+                -webkit-transition: -webkit-transform 1.5s linear;
+                -webkit-transform-style: preserve-3d;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="stage">
+            <div class="d1">1</div>
+            <div class="d2">2</div>
+            <div class="d3">3</div>
+            <div class="d4">4</div>
+            <div class="d5">5</div>
+            <div class="d6">6</div>
+            <div class="d7">7</div>
+            <div class="d8">8</div>
+            <div class="d9">9</div>
+            <div class="d10">10</div>
+        </div>
+        <script type="text/javascript">
+            var divs = [].slice.call(stage.getElementsByTagName('div'), 0),
+                len = divs.length,
+                offset = 200,
+                equalDeg = 360 / len;
+
+            var lineLen = (offset / 2) / Math.tan(equalDeg / 2 * Math.PI / 180);
+
+            divs.forEach(function(d, i) {
+                var deg = i * equalDeg;
+
+                d.style.cssText = '-webkit-transform: rotateY(' + deg + 'deg) '
+                                    + ' translateZ(' + lineLen + 'px);';
+            })
+
+            var index = 0;
+            setInterval(function() {
+                divs.forEach(function(d, i) {
+                    d.style.cssText = '-webkit-transform: rotateY(' + ((i - index) * equalDeg) + 'deg)' +
+                                      ' translateZ(' + lineLen + 'px);';
+                })
+                index++;
+                if(index > 20) index = 0;
+            }, 2000)
+        </script>
+    </body>
+</html>
